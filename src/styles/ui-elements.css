@@ -1,0 +1,87 @@
+
+/* Custom underline animation */
+.hover-underline {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: currentColor;
+  transform-origin: bottom right;
+  transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.hover-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Food item card hover effect */
+.food-card {
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-style: preserve-3d;
+}
+
+.food-card:hover {
+  transform: translateY(-12px) rotate(1deg);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.08);
+}
+
+.food-card img {
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.food-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Button animations */
+.btn-wobble:hover {
+  animation: wobble 1s ease-in-out;
+}
+
+/* Elastic hover buttons */
+.btn-elastic {
+  transition: transform 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.btn-elastic:hover {
+  transform: scale(1.05);
+}
+
+.btn-elastic:active {
+  transform: scale(0.95);
+}
+
+/* Paper cut effect for cards */
+.paper-cut {
+  position: relative;
+}
+
+.paper-cut::before, 
+.paper-cut::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 50%;
+}
+
+.paper-cut::before {
+  top: -10px;
+  box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.1);
+}
+
+.paper-cut::after {
+  bottom: -10px;
+  box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.1);
+}

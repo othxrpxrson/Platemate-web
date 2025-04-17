@@ -1,0 +1,18 @@
+
+/* Base styles and Tailwind directives */
+@import './styles/base.css';
+
+/* Component-specific styles */
+@import './styles/components.css';
+
+/* Animation definitions */
+@import './styles/animations.css';
+
+/* UI elements and controls */
+@import './styles/ui-elements.css';
+
+/* Form elements and styles */
+@import './styles/forms.css';
+
+/* Visual effects and decorations */
+@import './styles/effects.css';
